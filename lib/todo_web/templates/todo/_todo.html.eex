@@ -1,0 +1,6 @@
+<tr id="<%= @todo.id %>" class="todo">
+  <td><%= @todo.title %></td>
+  <td>
+    <input type="checkbox" onchange='toggleTodo("<%= @todo.id %>")'
+           <%= if @todo.finished do %>checked<% end %> /></td>
+</tr>

@@ -1,0 +1,17 @@
+<div class="todos">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Finished?</th>
+      </tr>
+    </thead>
+    <tbody id="todo-table-body">
+      <%= for todo <- @todos do %>
+        <%= render "_todo.html", todo: todo %>
+      <% end %>
+    </tbody>
+  </table>
+  <input id="create-todo-title" type="text" placeholder="Create TODO">
+  <button onclick="createTodo()" type="button">Create!</button>
+</div>
